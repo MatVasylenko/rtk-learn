@@ -11,7 +11,7 @@ interface IPostPageProps {
 const PostsPage:FC<IPostPageProps> = ({}) => {
   return (
     <div>
-      <Link />
+      <Link to="/users" >go to Users</Link>
       <PostList />
     </div>
   )

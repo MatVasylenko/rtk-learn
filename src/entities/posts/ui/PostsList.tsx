@@ -9,7 +9,9 @@ const PostList:FC<IPostListProps> = ({}) => {
   const {
     data: posts,
     isSuccess,
-  } = useGetPostsQuery(null);
+  } = useGetPostsQuery(null, {
+    refetchOnMountOrArgChange: true
+  });
 
   const [createPost] = useCreatePostMutation();
 

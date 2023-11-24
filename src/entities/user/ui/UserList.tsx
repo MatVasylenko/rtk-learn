@@ -3,6 +3,7 @@ import { useGetUsersQuery } from '../api/userApi';
 
 interface IUserListProps {
 
+
 };
 
 const UserList:FC<IUserListProps> = ({}) => {

@@ -1,6 +1,7 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit"
 import postApi from "../../entities/posts/api/postApi"
 import userApi from "../../entities/user/api/userApi"
+import mainApi from "./mainApi"
 
 export const store = configureStore({
   reducer: {
@@ -8,8 +9,7 @@ export const store = configureStore({
     [userApi.reducerPath]: userApi.reducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat([
-    postApi.middleware,
-    userApi.middleware
+    mainApi.middleware
   ]),
 })
 
